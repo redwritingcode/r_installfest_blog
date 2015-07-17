@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20150717074312) do
 
-  create_table "comments", force: true do |t|
+  create_table "comments", force: :cascade do |t|
     t.integer  "post_id"
     t.text     "body"
     t.datetime "created_at"
@@ -22,8 +22,8 @@ ActiveRecord::Schema.define(version: 20150717074312) do
 
   add_index "comments", ["post_id"], name: "index_comments_on_post_id"
 
-  create_table "posts", force: true do |t|
-    t.string   "title"
+  create_table "posts", force: :cascade do |t|
+    t.string   "title",      limit: 255
     t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
