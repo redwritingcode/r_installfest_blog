@@ -8,7 +8,7 @@ atom_feed do |feed|
       entry.content post.body, type: 'html'
 
       entry.author do |author|
-        author.name 'redwritingcode'
+        author.name 'Installfest Attendee'
       end
     end
   end
